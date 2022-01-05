@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Hoja estilo -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Piedra Papel o Tijeras</title>
+</head>
+<body>
+    
+
+    <!-- Login -->
+
+    <section class="contenedor-login">
+        <div class="contenido-login contenedor">
+           
+            <div class="contenedor-titulo">
+
+                <div class="titulo-login">
+                    <h3>Login</h3>
+                </div>
+    
+                <div class="ayuda">
+                    <svg id="btn-ayuda" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="9" />
+                        <line x1="12" y1="17" x2="12" y2="17.01" />
+                        <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                      </svg>
+                </div>
+            </div>
+
+            
+            <form class="contenido-formulario-login">
+                    
+                <div class="contenedor-usuario">
+                    <label>Usuario</label>
+                    <input id="input-usuario" type="text"> <span id="incorrecto-usuario"></span>
+                </div>
+
+                <div class="contenedor-contraseña">
+                    <label>Contraseña</label>
+                    <input id="input-contraseña" type="password">  <span id="incorrecto-contraseña"></span>
+                </div>
+
+                <div class="btn-login">
+                    <button id="btn-login">Aceptar</button>
+                </div>
+
+            </form>
+            
+
+        </div>
+
+        <!-- POP UP -->
+        <div class="contenedor-popup">
+            <div class="contenido-popup contenedor">
+
+             
+                <div class="contenido-ayuda">
+                    <p>usuario: admin</p>
+                    <p>contraseña: admin</p>
+                </div>
+
+                <div class="btn-cerrar-ayuda">
+                    <button id="btn-cerrar-ayuda">Cerrar</button>
+                </div>
+               
+            </div>
+        </div>
+        <!-- FIN POP UP -->
+    </section>
+
+    <!-- Fin Login -->
+
+
+
+
+
+    <!-- js login -->
+    <script src="js/login.js"></script>
+</body>
+</html>

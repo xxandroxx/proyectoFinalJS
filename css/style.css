@@ -1,0 +1,176 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+span{
+    color: red;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+
+/*LOGIN*/
+.contenedor-login{
+    background: linear-gradient(to right, rgb(14, 164, 252), rgb(126, 210, 212), rgb(14, 164, 252));
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+.contenido-login{
+    background: rgb(4, 129, 187);
+    border: solid #000 .2rem;
+    border-radius: 1rem;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 35rem;
+    height: 25rem;
+    padding: 2rem 3rem;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-titulo{
+    position: relative;
+    width: 100%;
+   
+}
+
+.ayuda{
+    position: absolute;
+    top: -3px;
+    right: 0;
+    cursor: pointer;
+}
+
+.titulo-login h3{
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+.contenido-formulario-login{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.contenedor-usuario{
+    margin-bottom: 2rem;
+}
+
+.contenedor-usuario input{
+    margin-left: 2rem;
+}
+
+.btn-login button{
+    margin-top: 3rem;
+    padding: 2rem 4rem;
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+
+/*POP UP**/
+
+.contenedor-popup{
+   background: rgba(0, 0, 0, .5);
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: none;
+}
+
+.contenido-popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 35rem;
+    height: 25rem;
+    background: rgb(212, 209, 209);
+    margin: auto;
+    border: solid .2rem #000;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.contenido-ayuda p{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.btn-cerrar-ayuda{
+    margin-top: 5rem;
+}
+
+.btn-cerrar-ayuda button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.btn-cerrar-ayuda button:hover{
+    background: red;
+    transition: .5s;
+}
+
