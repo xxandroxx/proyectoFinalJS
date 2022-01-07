@@ -311,7 +311,7 @@ const tijeraSeleccion = () =>{
 
 //Funcion termino de juego
 const terminoDeJuego = () =>{
-    if(acumulador >= 3){
+    if(acumulador >= 10){
         
         contenedorGameOver.style.display = 'block';
         
