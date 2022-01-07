@@ -81,12 +81,116 @@
 
     <!-- Fin Login -->
 
+    <!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Página principal -->
+
+    <div class="contenido-juego">
+
     
+        <header class="header contenedor">
+            <h1>Piedra Papel Tijera</h1>
+        </header>
 
 
+        <!-- BTN JUGAR -->
+        <section class="btn-jugar">
+            <h2>Jugar</h2>
+        </section>
+        <!-- FIN BTN JUGAR -->
+        
+        <main class="main-juego contenedor">
+
+            <!-- PUNTAJE -->
+            <div class="contenedor-puntaje">
+                <h2>Puntaje:</h2>
+                <h2 id="puntaje">0</h2>
+            </div>
+            <!-- FIN PUNTAJE -->
+
+            <div class="contenedor-jugadores">
+                <!-- sección PJ -->
+                <section class="contenedor-jugador">
+                    <h2>Jugador</h2>
+
+
+                    <div class="img-principal">
+                        <img id="img-principal-usuario" src="img/interrogacion.png" alt="img-principal">
+                    </div>
+
+                    <div class="seleccion-img">
+                        <img id="img-piedra" src="img/left-st.jpg" alt="piedra-img">
+                        <img id="img-papel" src="img/left-pp.jpg" alt="papel-img">
+                        <img id="img-tijera" src="img/left-sc.jpg" alt="tijera-img">
+                    </div>
+                </section>
+                <!-- fin sección PJ -->
+
+                <section class="contenedor-aviso">
+                    <h2 id="aviso"></h2>
+                </section>
+
+                <!-- sección IA -->
+                <section class="contenedor-jugador">
+                    <h2>IA</h2>
+
+
+                    <div class="img-principal">
+                        <img id="img-principal-ia" src="img/interrogacion.png" alt="img-principal">
+                    </div>
+
+                    <div id="seleccion-img" class="seleccion-img">
+                        <img src="img/right-sc.jpg" alt="tijera-img">
+                        <img src="img/right-pp.jpg" alt="papel-img">
+                        <img src="img/right-st.jpg" alt="piedra-img">
+                    </div>
+                </section>
+                <!-- fin sección IA -->
+
+            </div>
+
+        </main>
+
+         <!-- Game Over -->
+         <section class="contenedor-gameover">
+                
+            <div class="contenido-gameover">
+                <h2 id="puntaje-final"></h2>
+                <p id="btn-reintentar">Volver a jugar</p>
+            </div>
+
+        </section>
+        <!-- fin game over -->
+
+        <section class="contenedor-puntajes-anteriores contenedor">
+            <div class="contenido-puntajes-anteriores">
+                <h3 id="mostrar-puntajes">Puntaje 1:</h3>
+                
+            </div>
+        </section>
+
+
+        
+       
+        
+
+    </div>
+
+    <footer class="footer">
+        <p>Sitio creado por Sandro Ovando T.</p>
+    </footer>
+
+    <!-- Fin Página principal -->
+
+    
+   
 
 
     <!-- js login -->
     <script src="js/login.js"></script>
+
+    <!-- js juego -->
+    <script src="js/juego.js"></script>
+
 </body>
 </html>
