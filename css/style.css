@@ -36,6 +36,11 @@ span{
     color: red;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
@@ -270,6 +275,10 @@ span{
     margin-top: 10rem;
     text-align: center;
     display: none;
+}
+
+.contenido-puntajes-anteriores h3{
+    margin-bottom: 2rem;
 }
 
 /*FOOTER*/

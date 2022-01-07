@@ -8,6 +8,8 @@ const seleccionImg = document.querySelector('.seleccion-img');
 const seleccionImgIa = document.querySelector('#seleccion-img');
 const btnReintentar = document.querySelector('#btn-reintentar');
 const contenedorGameOver = document.querySelector('.contenedor-gameover');
+let arrayPuntosAcumulados = [];
+let musica = document.querySelector('#musica-fondo');
 
 //Puntaje
  let puntaje = document.querySelector('#puntaje');
@@ -34,9 +36,14 @@ const piedraSeleccion = () =>{
     //Seleccion del usuario
     imgPrincipalUsuario.src = 'img/left-st.jpg';
 
+    seleccionImg.style.visibility = 'hidden';
+    seleccionImgIa.style.visibility = 'hidden';
+
     setTimeout(() => {
         imgPrincipalUsuario.src = 'img/interrogacion.png';
-    }, 2000);
+        seleccionImg.style.visibility = 'visible';
+        seleccionImgIa.style.visibility = 'visible';
+    }, 1000);
 
 
     //Selección aleatoria del IA
@@ -64,12 +71,11 @@ const piedraSeleccion = () =>{
 
             //Acumulador
             acumulador++;
-            console.log(acumulador);
             terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
 
         }else if(numero < 3 && numero > 1){
 
@@ -85,12 +91,11 @@ const piedraSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }else{
 
             //Cambio de imagen
@@ -105,12 +110,11 @@ const piedraSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }
     }
 
@@ -125,9 +129,14 @@ const papelSeleccion = () =>{
     //Seleccion del usuario
     imgPrincipalUsuario.src = 'img/left-pp.jpg';
 
+    seleccionImg.style.visibility = 'hidden';
+    seleccionImgIa.style.visibility = 'hidden';
+
     setTimeout(() => {
         imgPrincipalUsuario.src = 'img/interrogacion.png';
-    }, 2000);
+        seleccionImg.style.visibility = 'visible';
+        seleccionImgIa.style.visibility = 'visible';
+    }, 1000);
 
 
     //Selección aleatoria del IA
@@ -155,12 +164,11 @@ const papelSeleccion = () =>{
 
             //Acumulador
             acumulador++;
-            console.log(acumulador);
             terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
 
         }else if(numero < 3 && numero > 1){
 
@@ -176,12 +184,11 @@ const papelSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }else{
 
             //Cambio de imagen
@@ -196,12 +203,11 @@ const papelSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }
     }
 
@@ -216,10 +222,16 @@ const tijeraSeleccion = () =>{
 
     //Seleccion del usuario
     imgPrincipalUsuario.src = 'img/left-sc.jpg';
+   
+    seleccionImg.style.visibility = 'hidden';
+    seleccionImgIa.style.visibility = 'hidden';
 
     setTimeout(() => {
         imgPrincipalUsuario.src = 'img/interrogacion.png';
-    }, 2000);
+        seleccionImg.style.visibility = 'visible';
+        seleccionImgIa.style.visibility = 'visible';
+    }, 1000);
+
 
 
     //Selección aleatoria del IA
@@ -247,12 +259,11 @@ const tijeraSeleccion = () =>{
 
             //Acumulador
             acumulador++;
-            console.log(acumulador);
             terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
 
         }else if(numero < 3 && numero > 1){
 
@@ -268,12 +279,11 @@ const tijeraSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }else{
 
             //Cambio de imagen
@@ -288,12 +298,11 @@ const tijeraSeleccion = () =>{
 
              //Acumulador
              acumulador++;
-             console.log(acumulador);
              terminoDeJuego();
 
             setTimeout(() => {
                 imgPrincipalIa.src = 'img/interrogacion.png';
-            }, 2000);
+            }, 1000);
         }
     }
 
@@ -302,9 +311,21 @@ const tijeraSeleccion = () =>{
 
 //Funcion termino de juego
 const terminoDeJuego = () =>{
-
-    if(acumulador >= 10){
+    if(acumulador >= 3){
+        
         contenedorGameOver.style.display = 'block';
+        
+        //mnusica
+        musica.pause();
+        musica.currentTime = 0;
+
+        if(arrayPuntosAcumulados.length >= 5){
+            arrayPuntosAcumulados.splice(1,1);
+        }else{
+            arrayPuntosAcumulados.push(puntosAcumulados);
+        }
+
+        localStoragePuntos(arrayPuntosAcumulados);
 
         if(puntosAcumulados < 0){
             puntosAcumulados = 0;
@@ -312,7 +333,34 @@ const terminoDeJuego = () =>{
         puntajeFinal.innerHTML = puntosAcumulados
     }
 
+    
 }
+
+
+//Funcion localstorage
+const getLocalStoragePuntos = () =>{
+    let mostrarArray = localStorage.getItem('puntos');
+
+    if(mostrarArray == null){
+        arrayPuntosAcumulados = [];
+    }else{
+        arrayPuntosAcumulados = JSON.parse(mostrarArray);
+    }
+
+    return mostrarPuntajes.innerHTML = `<li>${arrayPuntosAcumulados}</li>`;
+}
+
+
+const localStoragePuntos = (puntos) =>{
+    localStorage.setItem('puntos', JSON.stringify((puntos)));
+}
+
+getLocalStoragePuntos();
+
+
+
+
+
 
 /******************************************************************************* */
 
@@ -326,17 +374,28 @@ btnJugar.addEventListener('click', () =>{
         mainJuego.style.display = 'block';
         contenedorPuntajesAnteriores.style.display = 'block';
     }, 1000);
+
+
+    //musica
+    musica.play();
+
 });
 
 
 //Evento reiniciar el juego
 btnReintentar.addEventListener('click', () =>{
     contenedorGameOver.style.display = 'none';
+    
+    mostrarPuntajes.innerHTML = `<li>${arrayPuntosAcumulados}</li>`;
 
     acumulador = 0;
     puntosAcumulados = 0;
     puntaje.innerHTML = 0;
+
+    //musica
+    musica.play();
 });
+
 
 //Eventos de seleccion de imagen
 imgPiedra.addEventListener('click', piedraSeleccion);
